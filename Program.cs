@@ -9,6 +9,14 @@
     return result;
 }
 
+void PrintArr(string[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length - 1; i++)
+        Console.Write($"{arr[i]}, ");
+    Console.WriteLine($"{arr[arr.Length - 1]}]");
+}
+
 Console.WriteLine("*********************************************************************************");
 Console.WriteLine("Задача: Программа должна из имеющегося массива строк сформировать массив из строк,");
 Console.WriteLine("длина которых меньше либо равна 3 символам");

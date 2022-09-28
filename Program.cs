@@ -48,3 +48,23 @@ Console.WriteLine("Задача: Программа должна из имеющ
 Console.WriteLine("длина которых меньше либо равна 3 символам");
 Console.WriteLine("*********************************************************************************");
 
+Console.Write("Введите количество слов в массиве: ");
+int num = int.Parse(Console.ReadLine());
+if (num <= 0)
+{
+    Console.WriteLine("Ошибка: Невозможно создать массив! Число должно быть больше 0.");
+}
+else
+{
+    string[] newArray = GetArrey(num);
+    Console.Write("Исходный массив: ");
+    PrintArr(newArray);
+    int strCount = CountString(newArray);
+    if (strCount == 0) Console.WriteLine("В массиве нет эллементов, длина которых меньше, либо равна 3!");
+    else
+    {
+        string[] resultArray = TaskArray(newArray, strCount);
+        Console.Write($"Массив, в котороми длина всех эллементов меньше, либо равна 3 содержит {strCount} эл.: ");
+        PrintArr(resultArray);
+    }
+}
